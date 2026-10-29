@@ -1,4 +1,5 @@
 GENERATOR SURAT LAMARAN KERJA
+link:https://agusmardianto.github.io/karierkit/
 
 Cara menjalankan:
 1. Ekstrak folder website_lamaran_kerja.zip.
