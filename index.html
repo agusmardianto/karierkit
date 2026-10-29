@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>KarierKit | Generator Dokumen Karier</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="#" class="brand">
+            <span class="brand-logo">K</span>
+
+            <span>
+                <strong>KarierKit</strong>
+                <small>Generator Dokumen Karier</small>
+            </span>
+        </a>
+
+        <div class="nav-label">MENU UTAMA</div>
+
+        <nav class="navigation">
+
+            <button class="nav-item active"
+                    data-page="lamaran">
+                <span class="nav-icon">✉</span>
+                <span>Lamaran Kerja</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="cv">
+                <span class="nav-icon">▤</span>
+                <span>Curriculum Vitae</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="ats">
+                <span class="nav-icon">☷</span>
+                <span>CV ATS-Friendly</span>
+            </button>
+
+            <button class="nav-item"
+                    data-page="template">
+                <span class="nav-icon">▧</span>
+                <span>CV Berdasarkan Template</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-tip">
+                <strong>Tips Karier</strong>
+
+                <p>
+                    Sesuaikan isi dokumen dengan posisi
+                    pekerjaan yang Anda lamar.
+                </p>
+            </div>
+
+            <div class="sidebar-footer">
+                KarierKit · Versi 1.0
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- AREA UTAMA -->
+    <div class="app-shell">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Buka menu">
+                ☰
+            </button>
+
+            <div class="breadcrumb">
+                Workspace
+                <span>/</span>
+                <strong id="breadcrumbTitle">
+                    Lamaran Kerja
+                </strong>
+            </div>
+
+            <div class="topbar-status">
+                <span class="status-dot"></span>
+                Generator dokumen
+            </div>
+
+        </header>
+
+
+        <main class="main-content">
+
+            <!-- ================================= -->
+            <!-- HALAMAN LAMARAN KERJA -->
+            <!-- ================================= -->
+
+            <section class="page active"
+                     id="page-lamaran">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">DOKUMEN LAMARAN</p>
+
+                        <h1>Surat Lamaran Kerja</h1>
+
+                        <p class="page-description">
+                            Lengkapi formulir dan lihat perubahan
+                            surat secara langsung.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-print>
+                        Cetak / Simpan PDF
+                    </button>
+
+                </div>
+
+
+                <div class="workspace-grid">
+
+                    <!-- FORM SURAT -->
+                    <section class="card form-card">
+
+                        <div class="card-heading">
+
+                            <div>
+                                <h2>Data Surat Lamaran</h2>
+
+                                <p>
+                                    Masukkan informasi perusahaan
+                                    dan identitas Anda.
+                                </p>
+                            </div>
+
+                            <button class="btn btn-light btn-small"
+                                    type="button"
+                                    data-reset="letter">
+                                Reset
+                            </button>
+
+                        </div>
+
+
+                        <form id="letterForm">
+
+                            <div class="form-section">
+
+                                <h3>Informasi Perusahaan</h3>
+
+                                <label for="letterDate">
+                                    Tanggal Surat
+                                </label>
+
+                                <input type="date"
+                                       id="letterDate"
+                                       name="date"
+                                       required>
+
+
+                                <label for="company">
+                                    Nama Perusahaan
+                                </label>
+
+                                <input type="text"
+                                       id="company"
+                                       name="company"
+                                       placeholder="Nama perusahaan"
+                                       required>
+
+
+                                <label for="companyAddress">
+                                    Alamat Perusahaan
+                                </label>
+
+                                <textarea id="companyAddress"
+                                          name="companyAddress"
+                                          rows="3"
+                                          placeholder="Alamat lengkap perusahaan"
+                                          required></textarea>
+
+
+                                <label for="jobTitle">
+                                    Posisi yang Dilamar
+                                </label>
+
+                                <input type="text"
+                                       id="jobTitle"
+                                       name="jobTitle"
+                                       placeholder="Contoh: Staf Administrasi"
+                                       required>
+
+                            </div>
+
+
+                            <div class="form-section">
+
+                                <h3>Identitas Pelamar</h3>
+
+                                <label for="applicantName">
+                                    Nama Lengkap
+                                </label>
+
+                                <input type="text"
+                                       id="applicantName"
+                                       name="name"
+                                       placeholder="Nama lengkap"
+                                       required>
+
+
+                                <div class="form-row">
+
+                                    <div>
+                                        <label for="birthPlace">
+                                            Tempat Lahir
+                                        </label>
+
+                                        <input type="text"
+                                               id="birthPlace"
+                                               name="birthPlace"
+                                               placeholder="Pasuruan"
+                                               required>
+                                    </div>
+
+                                    <div>
+                                        <label for="birthDate">
+                                            Tanggal Lahir
+                                        </label>
+
+                                        <input type="date"
+                                               id="birthDate"
+                                               name="birthDate"
+                                               required>
+                                    </div>
+
+                                </div>
+
+
+                                <label for="education">
+                                    Pendidikan Terakhir
+                                </label>
+
+                                <input type="text"
+                                       id="education"
+                                       name="education"
+                                       placeholder="Contoh: S1 Teknik Informatika"
+                                       required>
+
+
+                                <label for="address">
+                                    Alamat Domisili
+                                </label>
+
+                                <textarea id="address"
+                                          name="address"
+                                          rows="3"
+                                          placeholder="Alamat tempat tinggal"
+                                          required></textarea>
+
+
+                                <div class="form-row">
+
+                                    <div>
+                                        <label for="email">
+                                            Email
+                                        </label>
+
+                                        <input type="email"
+                                               id="email"
+                                               name="email"
+                                               placeholder="nama@email.com"
+                                               required>
+                                    </div>
+
+                                    <div>
+                                        <label for="phone">
+                                            Nomor Telepon
+                                        </label>
+
+                                        <input type="tel"
+                                               id="phone"
+                                               name="phone"
+                                               placeholder="08xxxxxxxxxx"
+                                               required>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-section">
+
+                                <h3>Isi Surat</h3>
+
+                                <label for="experience">
+                                    Pengalaman Tambahan
+                                </label>
+
+                                <textarea id="experience"
+                                          name="experience"
+                                          rows="3"
+                                          placeholder="Pengalaman kerja atau keterampilan relevan"></textarea>
+
+
+                                <label for="attachments">
+                                    Daftar Lampiran
+                                </label>
+
+                                <textarea id="attachments"
+                                          name="attachments"
+                                          rows="4">1. Curriculum Vitae
+2. Fotokopi ijazah dan transkrip nilai
+3. Fotokopi KTP
+4. Pasfoto terbaru</textarea>
+
+
+                                <label for="closing">
+                                    Kalimat Penutup
+                                </label>
+
+                                <textarea id="closing"
+                                          name="closing"
+                                          rows="4">Demikian surat lamaran ini saya sampaikan. Saya berharap dapat diberikan kesempatan untuk mengikuti proses seleksi dan wawancara. Atas perhatian Bapak/Ibu, saya ucapkan terima kasih.</textarea>
+
+                            </div>
+
+
+                            <p class="form-note">
+                                Data diproses di browser dan tidak
+                                dikirim ke server.
+                            </p>
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-block">
+                                Perbarui Pratinjau
+                            </button>
+
+                        </form>
+
+                    </section>
+
+
+                    <!-- PRATINJAU SURAT -->
+                    <section class="preview-wrap">
+
+                        <div class="preview-heading">
+
+                            <div>
+                                <h2>Pratinjau Surat</h2>
+                                <p>Ukuran kertas A4</p>
+                            </div>
+
+                            <button class="btn btn-outline btn-small"
+                                    type="button"
+                                    data-print>
+                                Cetak
+                            </button>
+
+                        </div>
+
+
+                        <article class="paper letter-paper"
+                                 id="letterPaper">
+
+                            <div class="letter-date"
+                                 id="pLetterDate">
+                                Pasuruan, tanggal surat
+                            </div>
+
+
+                            <div class="letter-recipient">
+
+                                <p>Perihal: Lamaran Kerja</p>
+                                <p>Lampiran: Berkas</p>
+
+                                <br>
+
+                                <p>Kepada Yth.</p>
+
+                                <p id="pCompany">
+                                    HRD Nama Perusahaan
+                                </p>
+
+                                <p id="pCompanyAddress">
+                                    Alamat perusahaan
+                                </p>
+
+                            </div>
+
+
+                            <p>Dengan hormat,</p>
+
+                            <p class="justify indent">
+                                Berdasarkan informasi yang saya dapatkan bahwa perusahaan Bapak/Ibu sedang membutuhkan karyawan untuk mengisi lowongan yang ada. Untuk itu saya bermaksud melamar pekerjaan dan bergabung bersama guna mengisi posisi sebagai 
+                                <strong id="pJobTitle">
+                                    Posisi yang dilamar
+                                </strong>
+                                di perusahaan yang Bapak/Ibu pimpin.
+                            </p>
+
+
+                            <p>Berikut data diri saya:</p>
+
+
+                            <div class="letter-identity">
+
+                                <div>
+                                    <span>Nama</span>
+                                    <b>:</b>
+                                    <span id="pApplicantName">
+                                        Nama lengkap
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>Tempat, Tanggal Lahir</span>
+                                    <b>:</b>
+                                    <span id="pBirth">
+                                        Tempat, tanggal lahir
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>Pendidikan</span>
+                                    <b>:</b>
+                                    <span id="pEducation">
+                                        Pendidikan terakhir
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>Alamat</span>
+                                    <b>:</b>
+                                    <span id="pAddress">
+                                        Alamat domisili
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>Email</span>
+                                    <b>:</b>
+                                    <span id="pEmail">
+                                        Email
+                                    </span>
+                                </div>
+
+                                <div>
+                                    <span>No. Telepon</span>
+                                    <b>:</b>
+                                    <span id="pPhone">
+                                        Nomor telepon
+                                    </span>
+                                </div>
+
+                            </div>
+
+
+                            <p id="pExperience" hidden></p>
+
+
+                            <p class="justify">
+                                Sebagai bahan pertimbangan, saya
+                                lampirkan berkas sebagai berikut:
+                            </p>
+
+                            <div class="paper-lines"
+                                 id="pAttachments"></div>
+
+
+                            <p class="justify"
+                               id="pClosing"></p>
+
+
+                            <!-- TANDA TANGAN DI KANAN -->
+                            <div class="letter-signature">
+
+                                <p>Hormat saya,</p>
+
+                                <div class="sign-space"></div>
+
+                                <p class="signed-name"
+                                   id="pSignName">
+                                    Nama lengkap
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- HALAMAN CURRICULUM VITAE -->
+            <!-- ================================= -->
+
+            <section class="page" id="page-cv">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">PROFIL PROFESIONAL</p>
+                        <h1>Curriculum Vitae</h1>
+
+                        <p class="page-description">
+                            Buat CV profesional dengan foto,
+                            pendidikan, pengalaman, dan keterampilan.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-print>
+                        Cetak / Simpan PDF
+                    </button>
+
+                </div>
+
+
+                <div class="workspace-grid">
+
+                    <section class="card form-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <h2>Data CV</h2>
+                                <p>Lengkapi profil profesional Anda.</p>
+                            </div>
+
+                            <button class="btn btn-light btn-small"
+                                    type="button"
+                                    data-reset="cv">
+                                Reset
+                            </button>
+                        </div>
+
+
+                        <form id="cvForm">
+
+                            <div class="form-section">
+                                <h3>Profil Pribadi</h3>
+
+                                <label for="cvName">Nama Lengkap</label>
+                                <input id="cvName"
+                                       name="name"
+                                       required>
+
+                                <label for="cvHeadline">Jabatan / Profesi</label>
+                                <input id="cvHeadline"
+                                       name="headline"
+                                       placeholder="Contoh: Web Developer">
+
+                                <label for="cvPhoto">Foto Profil</label>
+                                <input id="cvPhoto"
+                                       name="photo"
+                                       type="file"
+                                       accept="image/*">
+
+                                <label for="cvEmail">Email</label>
+                                <input id="cvEmail"
+                                       name="email"
+                                       type="email">
+
+                                <label for="cvPhone">Nomor Telepon</label>
+                                <input id="cvPhone"
+                                       name="phone"
+                                       type="tel">
+
+                                <label for="cvLocation">Domisili</label>
+                                <input id="cvLocation"
+                                       name="location"
+                                       placeholder="Kota, Provinsi">
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Tentang Saya</h3>
+
+                                <label for="cvSummary">
+                                    Ringkasan Profil
+                                </label>
+
+                                <textarea id="cvSummary"
+                                          name="summary"
+                                          rows="4"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Pendidikan</h3>
+
+                                <label for="cvEducation">
+                                    Riwayat Pendidikan
+                                </label>
+
+                                <textarea id="cvEducation"
+                                          name="education"
+                                          rows="4"
+                                          placeholder="Universitas | 2021–2025&#10;S1 Teknik Informatika"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Pengalaman Pekerjaan</h3>
+
+                                <label for="cvExperience">
+                                    Riwayat Pengalaman
+                                </label>
+
+                                <textarea id="cvExperience"
+                                          name="experience"
+                                          rows="5"
+                                          placeholder="Nama perusahaan | periode&#10;Jabatan&#10;Tanggung jawab dan pencapaian"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Keahlian</h3>
+
+                                <label for="cvSkills">
+                                    Daftar Keahlian
+                                </label>
+
+                                <textarea id="cvSkills"
+                                          name="skills"
+                                          rows="3"
+                                          placeholder="Microsoft Office, Canva, Komunikasi"></textarea>
+                            </div>
+
+
+                            <button class="btn btn-primary btn-block"
+                                    type="submit">
+                                Perbarui CV
+                            </button>
+
+                        </form>
+
+                    </section>
+
+
+                    <section class="preview-wrap">
+
+                        <div class="preview-heading">
+                            <div>
+                                <h2>Pratinjau CV</h2>
+                                <p>Format profesional</p>
+                            </div>
+
+                            <button class="btn btn-outline btn-small"
+                                    type="button"
+                                    data-print>
+                                Cetak
+                            </button>
+                        </div>
+
+
+                        <article class="cv-paper" id="cvPaper">
+
+                            <header class="cv-header">
+
+                                <div>
+                                    <h2 id="pCvName">NAMA LENGKAP</h2>
+
+                                    <p id="pCvHeadline">
+                                        Jabatan / Profesi
+                                    </p>
+
+                                    <div class="cv-contact">
+                                        <span id="pCvEmail">Email</span>
+                                        <span id="pCvPhone">Telepon</span>
+                                        <span id="pCvLocation">Domisili</span>
+                                    </div>
+                                </div>
+
+                                <img id="pCvPhoto"
+                                     class="cv-photo"
+                                     alt="Foto profil"
+                                     hidden>
+
+                            </header>
+
+
+                            <section class="cv-section">
+                                <h3>TENTANG SAYA</h3>
+                                <p id="pCvSummary">
+                                    Ringkasan profil profesional.
+                                </p>
+                            </section>
+
+
+                            <section class="cv-section">
+                                <h3>PENDIDIKAN</h3>
+                                <div class="multiline"
+                                     id="pCvEducation">
+                                    Riwayat pendidikan.
+                                </div>
+                            </section>
+
+
+                            <section class="cv-section">
+                                <h3>PENGALAMAN PEKERJAAN</h3>
+                                <div class="multiline"
+                                     id="pCvExperience">
+                                    Pengalaman kerja.
+                                </div>
+                            </section>
+
+
+                            <section class="cv-section">
+                                <h3>KEAHLIAN</h3>
+                                <ul class="skills-list"
+                                    id="pCvSkills">
+                                    <li>Komunikasi</li>
+                                    <li>Kerja tim</li>
+                                </ul>
+                            </section>
+
+                        </article>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- HALAMAN CV ATS -->
+            <!-- ================================= -->
+
+            <section class="page" id="page-ats">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">FORMAT RAMAH ATS</p>
+                        <h1>CV ATS-Friendly</h1>
+
+                        <p class="page-description">
+                            CV satu kolom dengan struktur sederhana
+                            dan judul bagian yang jelas.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-print>
+                        Cetak / Simpan PDF
+                    </button>
+
+                </div>
+
+
+                <div class="workspace-grid">
+
+                    <section class="card form-card">
+
+                        <div class="card-heading">
+                            <div>
+                                <h2>Data CV ATS</h2>
+                                <p>Isi informasi profesional Anda.</p>
+                            </div>
+
+                            <button class="btn btn-light btn-small"
+                                    type="button"
+                                    data-reset="ats">
+                                Reset
+                            </button>
+                        </div>
+
+
+                        <form id="atsForm">
+
+                            <div class="form-section">
+                                <h3>Informasi Kontak</h3>
+
+                                <label for="atsName">Nama Lengkap</label>
+                                <input id="atsName"
+                                       name="name"
+                                       required>
+
+                                <label for="atsHeadline">Profesi</label>
+                                <input id="atsHeadline"
+                                       name="headline">
+
+                                <label for="atsContact">
+                                    Email, telepon, dan domisili
+                                </label>
+
+                                <textarea id="atsContact"
+                                          name="contact"
+                                          rows="3"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Ringkasan Profesional</h3>
+
+                                <label for="atsSummary">Ringkasan</label>
+                                <textarea id="atsSummary"
+                                          name="summary"
+                                          rows="4"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Pengalaman Kerja</h3>
+
+                                <label for="atsExperience">
+                                    Riwayat Pekerjaan
+                                </label>
+
+                                <textarea id="atsExperience"
+                                          name="experience"
+                                          rows="5"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Pendidikan</h3>
+
+                                <label for="atsEducation">
+                                    Riwayat Pendidikan
+                                </label>
+
+                                <textarea id="atsEducation"
+                                          name="education"
+                                          rows="4"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Keterampilan</h3>
+
+                                <label for="atsSkills">
+                                    Daftar Keterampilan
+                                </label>
+
+                                <textarea id="atsSkills"
+                                          name="skills"
+                                          rows="3"></textarea>
+                            </div>
+
+
+                            <div class="form-section">
+                                <h3>Sertifikasi</h3>
+
+                                <label for="atsCertificates">
+                                    Sertifikat (opsional)
+                                </label>
+
+                                <textarea id="atsCertificates"
+                                          name="certificates"
+                                          rows="3"></textarea>
+                            </div>
+
+
+                            <button class="btn btn-primary btn-block"
+                                    type="submit">
+                                Perbarui CV ATS
+                            </button>
+
+                        </form>
+
+                    </section>
+
+
+                    <section class="preview-wrap">
+
+                        <div class="preview-heading">
+                            <div>
+                                <h2>Pratinjau CV ATS</h2>
+                                <p>Format satu kolom</p>
+                            </div>
+
+                            <button class="btn btn-outline btn-small"
+                                    type="button"
+                                    data-print>
+                                Cetak
+                            </button>
+                        </div>
+
+
+                        <article class="ats-paper" id="atsPaper">
+
+                            <header class="ats-header">
+                                <h2 id="pAtsName">NAMA LENGKAP</h2>
+                                <p id="pAtsHeadline">Jabatan / Profesi</p>
+                                <p id="pAtsContact">Kontak</p>
+                            </header>
+
+
+                            <section>
+                                <h3>RINGKASAN PROFESIONAL</h3>
+                                <p class="multiline"
+                                   id="pAtsSummary"></p>
+                            </section>
+
+
+                            <section>
+                                <h3>PENGALAMAN KERJA</h3>
+                                <p class="multiline"
+                                   id="pAtsExperience"></p>
+                            </section>
+
+
+                            <section>
+                                <h3>PENDIDIKAN</h3>
+                                <p class="multiline"
+                                   id="pAtsEducation"></p>
+                            </section>
+
+
+                            <section>
+                                <h3>KETERAMPILAN</h3>
+                                <p class="multiline"
+                                   id="pAtsSkills"></p>
+                            </section>
+
+
+                            <section>
+                                <h3>SERTIFIKASI</h3>
+                                <p class="multiline"
+                                   id="pAtsCertificates"></p>
+                            </section>
+
+                        </article>
+
+                    </section>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- HALAMAN TEMPLATE -->
+            <!-- ================================= -->
+
+            <section class="page" id="page-template">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">PILIH DESAIN</p>
+                        <h1>CV Berdasarkan Template</h1>
+
+                        <p class="page-description">
+                            Pilih desain CV sesuai kebutuhan Anda.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-go="cv">
+                        Isi Data CV
+                    </button>
+
+                </div>
+
+
+                <div class="template-grid">
+
+                    <button class="template-card selected"
+                            type="button"
+                            data-template="classic">
+
+                        <div class="template-thumb classic-thumb">
+                            <div class="thumb-head">
+                                <span></span><b></b>
+                            </div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                            <div class="thumb-line short"></div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                            <div class="thumb-line short"></div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h2>Profesional Klasik</h2>
+                                <p>Foto profil dan bagian terstruktur.</p>
+                            </div>
+
+                            <span class="template-check">✓</span>
+                        </div>
+
+                    </button>
+
+
+                    <button class="template-card"
+                            type="button"
+                            data-template="minimal">
+
+                        <div class="template-thumb minimal-thumb">
+                            <div class="minimal-name"></div>
+                            <div class="minimal-rule"></div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                            <div class="thumb-line short"></div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h2>Minimalis Modern</h2>
+                                <p>Tampilan sederhana dan bersih.</p>
+                            </div>
+
+                            <span class="template-check">✓</span>
+                        </div>
+
+                    </button>
+
+
+                    <button class="template-card"
+                            type="button"
+                            data-template="ats">
+
+                        <div class="template-thumb ats-thumb">
+                            <div class="ats-thumb-name"></div>
+                            <div class="ats-thumb-rule"></div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                            <div class="thumb-line"></div>
+
+                            <div class="thumb-title"></div>
+                            <div class="thumb-line"></div>
+                        </div>
+
+                        <div class="template-info">
+                            <div>
+                                <h2>ATS Sederhana</h2>
+                                <p>Satu kolom dan tanpa foto.</p>
+                            </div>
+
+                            <span class="template-check">✓</span>
+                        </div>
+
+                    </button>
+
+                </div>
+
+
+                <div class="template-note">
+                    <strong>Catatan:</strong>
+                    Pilihan template menentukan desain CV.
+                    Untuk format ATS, gunakan menu CV ATS-Friendly
+                    agar dapat mengisi data yang sesuai.
+                </div>
+
+
+                <div class="template-actions">
+
+                    <button class="btn btn-outline"
+                            type="button"
+                            data-go="cv">
+                        Edit CV Profesional
+                    </button>
+
+                    <button class="btn btn-primary"
+                            type="button"
+                            data-go="ats">
+                        Buat CV ATS-Friendly
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- LAPISAN MENU UNTUK MOBILE -->
+    <div class="mobile-scrim" id="mobileScrim"></div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
